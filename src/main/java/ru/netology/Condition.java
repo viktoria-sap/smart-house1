@@ -1,13 +1,11 @@
 package ru.netology;
 
 public class Condition {
-    private String name;
     private int maxTemperature;
     private int minTemperature;
     private int currentTemperature;
     private int increaseCurrentTemperature;
     private int decreaseCurrentTemperature;
-    private boolean on;
 
 
     public int getCurrentTemperature() {
@@ -48,17 +46,8 @@ public class Condition {
         this.decreaseCurrentTemperature = currentTemperature;
     }
 
-
-    public int getMaxTemperature() {
-        return maxTemperature;
-    }
-
     public void setMaxTemperature(int maxTemperature) {
         this.maxTemperature = maxTemperature;
-    }
-
-    public int getMinTemperature() {
-        return minTemperature;
     }
 
     public void setMinTemperature(int minTemperature) {
