@@ -10,14 +10,6 @@ public class Radio {
     boolean next;
     boolean prev;
 
-    private int maxVolume;
-    private int minVolume;
-    private int currentVolume;
-    private int increaseCurrentVolume;
-    private int decreaseCurrentVolume;
-    boolean increase;
-    boolean decrease;
-
     public boolean isNext(boolean b) {
         return next;
     }
@@ -34,36 +26,27 @@ public class Radio {
         this.prev = prev;
     }
 
-
-    public int getMaxStation () {
-        return maxStation;
-    }
-
-    public void setMaxStation ( int maxStation){
+    public void setMaxStation(int maxStation) {
         this.maxStation = maxStation;
     }
 
-    public int getMinStation () {
-        return minStation;
-    }
-
-    public void setMinStation ( int minStation){
+    public void setMinStation(int minStation) {
         this.minStation = minStation;
     }
 
-    public int getNumberCurrentStation () {
+    public int getNumberCurrentStation() {
         return numberCurrentStation;
     }
 
-    public void setNumberCurrentStation ( int numberCurrentStation){
+    public void setNumberCurrentStation(int numberCurrentStation) {
         this.numberCurrentStation = numberCurrentStation;
     }
 
-    public int getNextStation () {
+    public int getNextStation() {
         return nextStation;
     }
 
-    public void setNextStation (int nextStation){
+    public void setNextStation(int nextStation) {
         if (isPrev(true)) {
             return;
         }
@@ -74,11 +57,11 @@ public class Radio {
         this.nextStation = numberCurrentStation;
     }
 
-    public  int getPrevStation () {
+    public int getPrevStation() {
         return prevStation;
     }
 
-    public void setPrevStation (int prevStation){
+    public void setPrevStation(int prevStation) {
         if (isNext(true)) {
             return;
         }
@@ -89,73 +72,4 @@ public class Radio {
         this.prevStation = numberCurrentStation;
     }
 
-    public boolean isIncrease(boolean b) {
-        return increase;
-    }
-
-    public void setIncrease(boolean increase) {
-        this.increase = increase;
-    }
-
-    public boolean isDecrease(boolean b) {
-        return decrease;
-    }
-
-    public void setDecrease(boolean decrease) {
-        this.decrease = decrease;
-    }
-
-    public int getMaxVolume () {
-        return maxVolume;
-    }
-
-    public void setMaxVolume ( int maxVolume){
-        this.maxVolume = maxVolume;
-    }
-
-    public int getMinVolume () {
-        return minVolume;
-    }
-
-    public void setMinVolume ( int minVolume){
-        this.minVolume = minVolume;
-    }
-
-    public int getCurrentVolume () {
-        return currentVolume;
-    }
-
-    public void setCurrentVolume ( int currentVolume){
-        this.currentVolume = currentVolume;
-    }
-
-    public int getIncreaseCurrentVolume () {
-        return increaseCurrentVolume;
-    }
-
-    public void setIncreaseCurrentVolume ( int increaseCurrentVolume){
-        if (isDecrease(true)) {
-            return;
-        }
-        currentVolume += 1;
-        if (currentVolume > maxVolume) {
-            currentVolume = maxVolume;
-        }
-        this.increaseCurrentVolume = currentVolume;
-    }
-
-    public int getDecreaseCurrentVolume () {
-        return decreaseCurrentVolume;
-    }
-
-    public void setDecreaseCurrentVolume ( int decreaseCurrentVolume){
-        if (isIncrease(true)) {
-            return;
-        }
-        currentVolume -= 1;
-        if (currentVolume < minVolume) {
-            currentVolume = minVolume;
-        }
-        this.increaseCurrentVolume = currentVolume;
-    }
 }
